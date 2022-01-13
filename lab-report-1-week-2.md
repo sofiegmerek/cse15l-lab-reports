@@ -81,8 +81,11 @@ Now you need to copy the public key onto the school server account. First enter 
 scp /Users/your_name/.ssh/id_rsa.pub cs15lwi22xxx@ieng6.ucsd.edu:~/.ssh/
 authorized_keys"
 ```
+```
         scp /Users/your_name/.ssh/id_rsa.pub cs15lwi22xxx@ieng6.ucsd.edu:~/.ssh/authorized_keys"
-<br/>Now you should be able to ssh and scp without typing in your password!
+```
+
+Now you should be able to ssh and scp without typing in your password!
 
 
 ## Optimizing Remote Running<a name = "Lab1_6"></a>
