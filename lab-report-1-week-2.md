@@ -3,7 +3,7 @@
 
 # Lab 1 Report: Starting in CSE 15L
 
-1. [Installing VS Code]](#Lab1_1)
+1. [Installing VS Code](#Lab1_1)
 2. [Remotely Connecting](#Lab1_2)
 3. [Trying Some Commands](#Lab1_3)
 4. [Moving Files with scp](#Lab1_4)
