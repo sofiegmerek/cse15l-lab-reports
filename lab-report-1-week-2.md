@@ -62,8 +62,14 @@ You can also run the java file on the remote server using javac Hello.java and j
 It can take time and cause frustration when you have to keep typing the password in. This can be made faster and easier by using an ssh key. You have a public and private key with the local computer and the server and the ssh command will use those keys to connect instead of the password. 
 So you need to run "ssh-keygen" which will generate a key pair. And ask where you would like to save it. Put it in a file called "/Users/your_name/.ssh/id_rsa". Then it will give you an image.
 ![Image](photos/keygen.png)
-Now you need to copy the public key onto the school server account. First enter your school account on the terminal like we did before. Then we are going to make a folder with "mkdir .ssh" to store the key. Then log out of the school account and on your computer scp the key over with "scp /Users/your_name/.ssh/id_rsa.pub cs15lwi22xxx@ieng6.ucsd.edu:~/.ssh/authorized_keys"
-</br>Now you should be able to ssh and scp without typing in your password!
+Now you need to copy the public key onto the school server account. First enter your school account on the terminal like we did before. Then we are going to make a folder with "mkdir .ssh" to store the key. Then log out of the school account and on your computer scp the key over with 
+```
+scp /Users/your_name/.ssh/id_rsa.pub cs15lwi22xxx@ieng6.ucsd.edu:~/.ssh/
+authorized_keys"
+```
+        scp /Users/your_name/.ssh/id_rsa.pub cs15lwi22xxx@ieng6.ucsd.edu:~/.ssh/
+authorized_keys"
+<br/>Now you should be able to ssh and scp without typing in your password!
 
 
 ## Optimizing Remote Running<a name = "Lab1_6"></a>
