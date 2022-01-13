@@ -61,15 +61,15 @@ You can also run the java file on the remote server using javac Hello.java and j
 ## Setting an SSH Key<a name = "Lab1_5"></a>
 It can take time and cause frustration when you have to keep typing the password in. This can be made faster and easier by using an ssh key. You have a public and private key with the local computer and the server and the ssh command will use those keys to connect instead of the password. 
 So you need to run "ssh-keygen" which will generate a key pair. And ask where you would like to save it. Put it in a file called "/Users/your_name/.ssh/id_rsa". Then it will give you an image.
-![Image](keygen.png)
+![Image](photos/keygen.png)
 Now you need to copy the public key onto the school server account. First enter your school account on the terminal like we did before. Then we are going to make a folder with "mkdir .ssh" to store the key. Then log out of the school account and on your computer scp the key over with "scp /Users/your_name/.ssh/id_rsa.pub cs15lwi22xxx@ieng6.ucsd.edu:~/.ssh/authorized_keys"
 </br>Now you should be able to ssh and scp without typing in your password!
 
 
 ## Optimizing Remote Running<a name = "Lab1_6"></a>
 There are further ways we can make our running faster and more optimized. One way is by running multiple commands in one line. This can be done with putting a semicolon between the commands on the same line. For example we can compile and run java code in one line. 
-![Image](twocommand.png)
+![Image](photos/twocommand.png)
 Another way to optimize is to run commands without logging into the server, by putting ssh and the location, with the command in double quotes. 
-![Image](Remote.png)
+![Image](photos/Remote.png)
 You can combine these and run multiple commands on the remote server without logging in.
-![Image](Combine.png)
+![Image](photos/Combine.png)
