@@ -93,3 +93,19 @@ Another way to optimize is to run commands without logging into the server, by p
 ![Image](photos/Remote.png)
 You can combine these and run multiple commands on the remote server without logging in.
 ![Image](photos/Combine.png)
+We can try this with editing a file locally, sending it over and running it. We can do this in about 6 keystrokes. 
+First edit the file, I commented out a line in WhereAmI.java and saved it, which took 4 keystrokes. 
+Then send it over using scp:
+<br>
+``` 
+scp WhereAmI.java cs15lwi22xxx@ieng6.ucsd.edu 
+```
+We can use an earlier call and 1 up arrows to get this, so it is 1 keystroke.
+Then we need to run it on the remote server, where we can also use an earlier command, and our tips on using quotes. 
+``` 
+ssh cs15lwi22xxx@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
+```
+We can use 2 up arrows to get to this as we ran it before, or 2 more keystrokes. And it runs!
+![Image](photos/optimal.png)
+
+So in total it took 13 keystrokes!
