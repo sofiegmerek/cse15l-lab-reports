@@ -33,4 +33,5 @@ Our next bug dealt with the similarities between the image format in html and th
 "\!\[Image]\(link )" which could be misinterpreted as a link. In out program this was a bug, the program was not checking if it was an image. The symptom was that an image was treated as a link and put into the arraylist. To fix this we added a check to see if there was an ! directly before the first bracket. We also combined the if statements to make it cleaner and so that it wouldn't immediately break, as there could be a valid link after an invalid one.
 ![Image](photos/lab2/commit3.png)
 [Test file causing issues](https://github.com/sofiegmerek/markdown-parse/blob/main/test5.md)
+Here is the output
 ![Image](photos/lab2/out3.png)
