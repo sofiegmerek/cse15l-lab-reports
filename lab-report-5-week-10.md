@@ -40,8 +40,10 @@ The bug causing this is that the check for if theres an image is
                toReturn.add(markdown.substring(openParen + 1, closeParen));
            }
 ```
-But if there are no "!" marks then the idnex is -1, and if the open bracket is 0, or there is a link at the start of the file, it will skip it. This can be fixed by having a check if the open parentheses index is 0 and not checking for the image "!" for that link. 
+But if there are no "!" marks then the index is -1, and if the open bracket is 0, or there is a link at the start of the file, it will skip it. This can be fixed by having a check if the open parentheses index is 0 and not checking for the image "!" for that link. 
 
+Here is the code for the fix, the part that needed fixing was the if to check for !
+![Image](photos/504tofix.png)
 
 # Test 2: 504.md
 The second disparity which comes from line 900 in the diff 
@@ -55,6 +57,9 @@ This file contains
 which according to commonmark should output 3 links as seen here. With title's title.
 ![Image](photos/cm2.png)
 
-The given MarkdownParse outputs nothing, whcih is incorrect. Our implementation outputs the three links which is more correct, however it also includes the parentheses in the link which it should not and it should not innclude the title, as the linnk goes to url. Neither of the programs are correct.
+The given MarkdownParse outputs nothing, which is incorrect. Our implementation outputs the three links which is more correct, however it also includes the parentheses in the link which it should not and it should not innclude the title, as the link goes to url. Neither of the programs are correct.
 
 For our implementation, the bug is that it is including everything in the parentheses, but not all of it is the link in this case. For this bug to fix it we can have a check if there is a space in the link, and if there are either enclosing quotations or parentheses with text inside indicating a title. This could then skip that part and only include the link.
+
+Here is the code, we would need to have a check before we add to ToReturn.
+![Image](photos/504sec.png)
