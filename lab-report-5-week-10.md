@@ -21,7 +21,7 @@ The results from our MD parse is ![Image](photos/vimoutout.png)
 The results from the given MD Parse is ![Image](photos/vimresults.png)
 I now see the different outputs for the test files were for files 500 and 504.
 
-Test 1: 500.md
+# Test 1: 500.md
 Line 894 in the diff 
  
 
@@ -43,7 +43,7 @@ The bug causing this is that the check for if theres an image is
 But if there are no "!" marks then the idnex is -1, and if the open bracket is 0, or there is a link at the start of the file, it will skip it. This can be fixed by having a check if the open parentheses index is 0 and not checking for the image "!" for that link. 
 
 
-
+# Test 2: 504.md
 The second disparity which comes from line 900 in the diff 
 is from file 504.md.
 This file contains 
