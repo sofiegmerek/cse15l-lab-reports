@@ -23,7 +23,11 @@ I now see the different outputs for the test files were for files 500 and 504.
 
 # Test 1: 500.md
 Line 894 in the diff 
- 
+Here is our output
+![Image](photos/ours500.png)
+Here is given implementation's output
+![Image](photos/given500.png)
+
 
 The actual file is 
 The expected output is ![Image](photos/500exp.png) 
@@ -48,6 +52,11 @@ Here is the code for the fix, the part that needed fixing was the if to check fo
 # Test 2: 504.md
 The second disparity which comes from line 900 in the diff 
 is from file 504.md.
+Here is our output:
+![Image](photos/ours504.png)
+Here is the given implemenation's output:
+![Image](photos/given504.png)
+
 This file contains 
 ```
 [link](/url "title")
